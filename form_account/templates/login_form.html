@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录表单</title>
+</head>
+<body>
+    <form action="." method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.username.label }}
+            {{ form.username }}
+            {{ form.username.errors.as_text }}
+        </div>
+        <div>
+            {{ form.password.label }}
+            {{ form.password }}
+            {{ form.password.errors }}
+        </div>
+        <div>
+            {# 自定义的错误信息 #}
+            {{ form.non_field_errors.as_text }}
+        </div>
+        <input type="submit">
+    </form>
+</body>
+</html>

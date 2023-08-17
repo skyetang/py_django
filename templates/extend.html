@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block title %}extend页面{% endblock %}
+
+{% block header %}
+    <div style="background-color: antiquewhite">
+    {{ block.super }}
+    <p>继承的头部内容，并且添加其它內容</p>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div style="color: blue;font-size: 24px">extend 的内容区域</div>
+
+    {% comment%}
+       引入公共的页脚部分，需要放在某个block里面
+    {% endcomment %}
+    {% include 'footer.html' %}
+{% endblock %}
+

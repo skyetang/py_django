@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}BASE页面{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block header %}
+            Base页面的头部区域
+        {% endblock %}
+    </header>
+    {% block middle %}
+        Base的中部區域
+    {% endblock %}
+    <atricle>
+        {% block content %}
+            Base页面的内容区域
+        {% endblock %}
+    </atricle>
+</body>
+</html>

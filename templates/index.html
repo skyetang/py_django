@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>这里是主页</h1>
+    <p>用户名：{{ username }}</p>
+    <p>年龄：{{ age }}</p>
+    <h2>以下是列表</h2>
+    {% for li in list %}
+        <p>姓名：{{ li.name }}</p>
+        <p>年龄：{{ li.age }}</p>
+    {% endfor %}
+    <h3>以下是猫的信息：</h3>
+    <p>{{ cat.display }}</p>
+</body>
+</html>
